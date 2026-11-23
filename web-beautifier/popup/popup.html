@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网页美化师</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="hd">
+    <div class="logo">✦</div>
+    <div class="tt">
+      <h1>网页美化师</h1>
+      <span class="sub">WebBeautifier · 全局美化</span>
+    </div>
+    <label class="switch" title="总开关">
+      <input type="checkbox" id="enabled">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main>
+    <!-- 暗色模式 -->
+    <section class="sect">
+      <div class="row">
+        <div class="lbl"><span class="ic">🌙</span><div><b>暗色模式</b><small>全站一键变暗</small></div></div>
+        <label class="switch"><input type="checkbox" id="darkMode"><span class="slider"></span></label>
+      </div>
+      <div class="row sub" id="darkRow">
+        <span class="sm">亮度</span>
+        <input type="range" id="darkStrength" min="10" max="120" value="80" step="2">
+        <span class="val" id="darkVal">80</span>
+      </div>
+    </section>
+
+    <!-- 字体与排版 -->
+    <section class="sect">
+      <div class="row">
+        <div class="lbl"><span class="ic">🔤</span><div><b>字体排版</b><small>平滑抗锯齿·行距</small></div></div>
+        <label class="switch"><input type="checkbox" id="fontOptimize"><span class="slider"></span></label>
+      </div>
+    </section>
+
+    <!-- 圆角卡片 -->
+    <section class="sect">
+      <div class="row">
+        <div class="lbl"><span class="ic">🔲</span><div><b>圆角卡片</b><small>控件与卡片圆润化</small></div></div>
+        <label class="switch"><input type="checkbox" id="roundCards"><span class="slider"></span></label>
+      </div>
+    </section>
+
+    <!-- 焦点高光 -->
+    <section class="sect">
+      <div class="row">
+        <div class="lbl"><span class="ic">🔍</span><div><b>焦点高光</b><small>键盘/点击焦点发光</small></div></div>
+        <label class="switch"><input type="checkbox" id="focusGlow"><span class="slider"></span></label>
+      </div>
+    </section>
+
+    <!-- 美化滚动条 -->
+    <section class="sect">
+      <div class="row">
+        <div class="lbl"><span class="ic">📜</span><div><b>美化滚动条</b><small>圆角磨砂滚动条</small></div></div>
+        <label class="switch"><input type="checkbox" id="scrollbar"><span class="slider"></span></label>
+      </div>
+    </section>
+
+    <!-- 阅读列宽 -->
+    <section class="sect">
+      <div class="row">
+        <div class="lbl"><span class="ic">📖</span><div><b>阅读列宽</b><small>正文限宽更易读</small></div></div>
+        <label class="switch"><input type="checkbox" id="readWidth"><span class="slider"></span></label>
+      </div>
+    </section>
+
+    <!-- 对比度 -->
+    <section class="sect">
+      <div class="row2">
+        <span class="lbl"><span class="ic">◐</span>对比度</span>
+        <input type="range" id="contrast" min="80" max="130" value="100" step="1">
+        <span class="val" id="contrastVal">100%</span>
+      </div>
+    </section>
+
+    <!-- 饱和度 -->
+    <section class="sect">
+      <div class="row2">
+        <span class="lbl"><span class="ic">🎨</span>饱和度</span>
+        <input type="range" id="saturation" min="80" max="140" value="100" step="1">
+        <span class="val" id="saturationVal">100%</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <button id="resetBtn" class="ghost">恢复默认</button>
+    <span class="hint">应用到所有已打开的标签页</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
